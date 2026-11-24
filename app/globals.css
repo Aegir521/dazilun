@@ -22,4 +22,4 @@ main.logbook{padding:85px 0 30px;margin:0 auto;width:min(90%,1050px)}
 .record-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(245px,1fr);gap:20px;align-items:start}
 .record-grid .sectiontitle{margin-bottom:16px}
 @media(max-width:650px){.word-core{width:min(54vw,48svh)}.orbit-field{inset:48px 0 44px}.record-grid{grid-template-columns:1fr}.record-grid aside{display:flex}.orbit-nav nav{gap:25px}}
-@media(max-height:450px) and (min-width:651px){.word-core{width:42svh}.orbit-field{inset:30px 0}.orbit-nav{max-height:45px}}
+@media(max-height:450px) and (min-width:651px){.word-core{width:42svh}.orbit-field{inset:30px 0}.orbit-nav{max-height:45px}}.orbit-nav .log-settings{position:absolute;right:3vw;background:transparent;border:0;color:#b5aebf;font-size:13px;padding:8px} @media(max-width:420px){.orbit-nav:has(.log-settings) nav{margin-right:60px}}

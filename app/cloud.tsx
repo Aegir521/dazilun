@@ -12,9 +12,10 @@ function pack(words:Word[],aspect:number){
  for(let i=0;i<total;i++){
    const w=words[i%count],echo=i>=count;
    const emphasis=Math.min(1,w.score/(words[0].score||1));
-   const size=(echo?2.5+rand()*2:Math.min(17,4+13*Math.pow(emphasis,1.3),72/w.name.length))*Math.min(1,Math.sqrt(16/count));
-   const vertical=w.name.length<=5 && (echo ? i%4===1 : i>=2 && i%4===2);
-   const line=size*w.name.length+.6, thickness=size*1.14;
+   const units=Array.from(w.name).reduce((sum,ch)=>sum+(/[a-z0-9 ]/i.test(ch)?0.72:1),0);
+   const size=(echo?2.5+rand()*2:Math.min(17,4+13*Math.pow(emphasis,1.3),72/units))*Math.min(1,Math.sqrt(16/count));
+   const vertical=/[\u3400-\u9fff]/.test(w.name) && w.name.length<=5 && (echo ? i%4===1 : i>=2 && i%4===2);
+   const line=size*units+.6, thickness=size*1.14;
    const width=(vertical?thickness:line)*aspect, height=vertical?line:thickness;
    // Fill from the centre out; a small bias breaks ties without opening gaps.
    let best:{x:number,y:number,d:number}|undefined;

@@ -4,7 +4,7 @@
 
 A *dazi* is someone you share an activity with. The same friend can be your badminton partner, dinner companion, and study buddy. Dazilun turns the time two people spend together into an interactive star map. Each label represents one shared activity, and its size reflects the time you have given it.
 
-The app interface is in Simplified Chinese. Each deployment has its own accounts, access list, and activity database.
+The interface supports English and Simplified Chinese. Open **Settings → Language** on the map or activity log to switch. Your browser remembers the choice; partner names and custom roles keep their original text. Each deployment has its own accounts, access list, and activity database.
 
 ## How the map works
 
